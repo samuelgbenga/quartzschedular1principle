@@ -12,6 +12,7 @@ public class JobService {
         this.scheduler = scheduler;
     }
 
+
     public void scheduleOneOffJob(String message) throws SchedulerException {
         JobDetail jd = JobBuilder.newJob(HelloJob2.class)
                 .withIdentity("job-" + UUID.randomUUID())
